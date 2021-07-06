@@ -30,13 +30,5 @@ for (i = 0; i < list.length; i++) {
 listOfNames.innerHTML = listItems
 
 //Stampare posizione della lista in cui il nuovo utente si trova
-
-var positionNumber;
-
-for (i = 0; i < list.length; i++) {
-    if (userName === list[i]) {
-        positionNumber = i + 1;
-    }
-}
-
+var positionNumber = list.indexOf(userName) + 1;
 document.getElementById("name-position").innerText = "La posizione dell'utente in lista è: " + positionNumber;
