@@ -13,7 +13,10 @@ var listItems = "";
 var list = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 
 //Chiedere cognome all'utente
-var userName = prompt("Qual è il tuo cognome?").toUpperCase();
+do {
+    var userName = prompt("Qual è il tuo cognome?").trim().toUpperCase();
+}
+while (!isNaN(userName));
 
 //Aggiungere il suo cognome alla lista
 list.push(userName);
